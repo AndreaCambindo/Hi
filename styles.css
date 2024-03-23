@@ -1,70 +1,91 @@
 body {
-    font-family: Raleway; 
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #C00000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  footer {
-    background-color: #C00000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
+  font-family: Raleway; 
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #C00000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer {
+  background-color: #C00000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Alinear los elementos en columna */
+  align-items: center;
+  padding: 10px;
+}
+
+.author-info {
+  text-align: center;
+  margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.author-info img {
+  max-width: 100%; /* Establecer el ancho máximo de la imagen al 100% del contenedor */
+  height: auto; /* Mantener la proporción de aspecto de la imagen */
+  border-top-left-radius: 50px; /* Redondear la esquina superior izquierda */
+  border-top-right-radius: 50px; /* Redondear la esquina superior derecha */
+}
+
+.titulo {
+  color: #C00000;
+}
+
+.titulo2 {
+  color: #C00000;
+  font-weight: bold;
+  font-size: 30px;
+}
+.parejapregunta{
+  color: #C00000;
+}
+
+.author-bio {
+  text-align: center;
+  padding: 0 20px; /* Reducir el espacio horizontal para dispositivos pequeños */
+}
+
+.author-bio h2 {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.author-bio hr {
+  width: 100%; /* Ancho completo para dispositivos pequeños */
+  max-width: 600px; /* Ancho máximo para dispositivos grandes */
+  border: 1.5px solid #C00000; /* Estilo de la línea divisoria */
+  margin-bottom: 10px;
+}
+
+.author-bio p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+      flex-direction: row; /* Cambiar a alineación horizontal en dispositivos grandes */
+      justify-content: center;
   }
-  
+
   .author-info {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .author-info img {
-    max-width: 100%; /* Establecer el ancho máximo de la imagen al 100% del contenedor */
-    height: auto; /* Mantener la proporción de aspecto de la imagen */
-    border-top-left-radius: 400px; /* Redondear la esquina superior izquierda */
-    border-top-right-radius: 0px; /* Redondear la esquina superior derecha */
+      flex: 1; /* Alinear la imagen a la izquierda en dispositivos grandes */
+      margin-right: 15px; /* Espacio entre la imagen y el texto en dispositivos grandes */
   }
 
-  .titulo{
-    color: #C00000;
-  }
-
-  .titulo2{
-    color: #C00000;
-    font-weight: bold;
-    font-size: 30px;
-  }
-    
   .author-bio {
-    flex: 1;
-    padding: 0 40px;
+      flex: 1; /* Alinear el texto a la derecha en dispositivos grandes */
+      text-align: left;
   }
-  
-  .author-bio h2 {
-    font-size: 17px;
-    margin-bottom: 20px;
-  }
-  
-  .author-bio hr {
-    width: 600px; /* Ancho de la línea divisoria */
-    border: 1.5px solid #C00000; /* Estilo de la línea divisoria */
-    margin-bottom: 10px;
-  }
-  
-  .author-bio p {
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-  }
+}
